@@ -16,7 +16,7 @@ const Products = ({data}) => {
         </div>
         <div className="All Products grid grid-cols-3 w-fit mx-auto gap-10 items-center mt-4">
             {
-                data.map(el=><Card  />)
+                data.map((el, i)=><Card key={i} name={el.name} description={el.description} price={el.price} period={el.period} tag={el.tag} features={el.features} icon={el.icon}/>)
             }
         </div>
     </div>
