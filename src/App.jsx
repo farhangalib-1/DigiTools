@@ -7,6 +7,9 @@ import { useEffect, useState } from 'react'
 import Products from './components/Products'
 import Starter from './components/Starter'
 import Pricing from './components/Pricing'
+import Footer from './components/Footer'
+import { Copyright } from 'lucide-react'
+import Lastfooter from './components/Lastfooter.jsx'
 const App = () => {
   const[data, setData] = useState([]);
   const [pricedata, setPriceData] = useState([]);
@@ -34,6 +37,8 @@ const App = () => {
     <Products data={data} />
     <Starter />
     <Pricing pricedata={pricedata} />
+    <Footer />
+    <Lastfooter />
     </>
   )
 }
