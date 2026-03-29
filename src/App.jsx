@@ -5,6 +5,7 @@ import Navbar from './components/Navbar'
 import Stat from './components/Stat'
 import { useEffect, useState } from 'react'
 import Products from './components/Products'
+import Starter from './components/Starter'
 const App = () => {
   const[data, setData] = useState([]);
   const ProductsData = async () =>{
@@ -23,6 +24,7 @@ const App = () => {
     <HeroBg />
     <Stat />
     <Products data={data} />
+    <Starter />
     </>
   )
 }
