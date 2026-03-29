@@ -6,17 +6,25 @@ import Stat from './components/Stat'
 import { useEffect, useState } from 'react'
 import Products from './components/Products'
 import Starter from './components/Starter'
+import Pricing from './components/Pricing'
 const App = () => {
   const[data, setData] = useState([]);
+  const [pricedata, setPriceData] = useState([]);
   const ProductsData = async () =>{
       const res = await axios.get("/Product.json")
-      setData(res.data);
-      
+      setData(res.data);  
   }
+   const priceData = async () =>{
+      const res = await axios.get("/Price.json")
+      setPriceData(res.data);  
+  }
+  
   useEffect(()=>{
     ProductsData();
+    priceData()
   }, [])
 
+  
   
   return (
     <>
@@ -25,6 +33,7 @@ const App = () => {
     <Stat />
     <Products data={data} />
     <Starter />
+    <Pricing pricedata={pricedata} />
     </>
   )
 }
