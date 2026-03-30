@@ -3,7 +3,7 @@ const Card = (props) => {
    <div className="card max-w-96 bg-base-100 shadow-sm">
   <div className="card-body">
     <div className="flex justify-end">
-    <span className="badge badge-lg rounded-full badge-warning">{props.tag}</span>
+    <span className={`badge badge-lg rounded-full ${props.tag === 'Best Seller' && 'badge-soft badge-warning border border-[#ffe4ab] '} ${props.tag === 'Popular' && 'badge-soft badge-primary border border-[#bfc9fe]'} ${props.tag === 'New' && 'badge-soft badge-success border border-[#a8ffd4]'} `}>{props.tag}</span>
     </div>
     <div className="border-2 border-gray-300 p-3 overflow-hidden rounded-full w-fit">
         <img src={props.icon} alt="" />
