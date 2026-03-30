@@ -1,6 +1,6 @@
 const Card = (props) => {
   return (
-   <div className="card w-96 bg-base-100 shadow-sm">
+   <div className="card max-w-96 bg-base-100 shadow-sm">
   <div className="card-body">
     <div className="flex justify-end">
     <span className="badge badge-lg rounded-full badge-warning">{props.tag}</span>

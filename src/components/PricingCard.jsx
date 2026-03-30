@@ -2,10 +2,10 @@
 const PricingCard = (props) => {
   return (
     <div>
-    <div className="card w-96 bg-gray-100 rounded-2xl shadow-sm">
+    <div className="card max-w-96 bg-gray-100 rounded-2xl shadow-sm">
   <div className={`card-body ${props.tag==='Most Popular' && 'bg-linear-to-r from-[#4F39F6] to-[#9514FA] text-white rounded-2xl'} relative`}>
     {
-        props.tag === null || <div className="flex justify-center absolute -top-4 left-34"><span className="badge badge-lg bg-[#FEF3C6] text-[#BB4D00] rounded-full flex j badge-warning border-none">Most Popular</span></div> 
+        props.tag === null || <div className="flex justify-center absolute -top-4 left-33"><span className="badge badge-lg bg-[#FEF3C6] text-[#BB4D00] rounded-full flex j badge-warning border-none">Most Popular</span></div> 
     }
     
     <div className="flex justify-between">
