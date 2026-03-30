@@ -31,7 +31,7 @@ const App = () => {
   
   
   return (
-    <>
+    <div>
     <Navbar addCartProducts={addCartProducts} />
     <HeroBg />
     <Stat />
@@ -41,7 +41,7 @@ const App = () => {
     <ToastContainer autoClose={3000} />
     <Footer />
     <Lastfooter />
-    </>
+    </div>
   )
 }
 

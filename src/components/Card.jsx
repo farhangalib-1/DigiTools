@@ -1,9 +1,15 @@
+import { useState } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
+
 const Card = ({name, description,price, period,tag,features,icon, addCartProducts,element, setAddCartProducts}) => {
   const notify = () => toast.success("Product is added successfully");
+  const[added, setAdded] = useState(false);
 const addProducts = ()=>{
-    notify();
-    setAddCartProducts([...addCartProducts, element])
+    
+    addCartProducts.find(el=>el.id === element.id) ? toast.error("Product is already added") : notify();
+    addCartProducts.find(el=>el.id === element.id) || setAddCartProducts([...addCartProducts, element])
+    
+    addCartProducts.find(el=>el.id === element.id) || setAdded(true)
   }
   return (
    <div className="card max-w-96 bg-base-100 shadow-sm">
@@ -34,7 +40,7 @@ const addProducts = ()=>{
       
     </ul>
     <div className="mt-6">
-      <button onClick={addProducts} className="btn rounded-full bg-linear-to-r from-[#4F39F6] to-[#9514FA] text-white btn-block">Buy Now</button>
+      <button onClick={addProducts} className={`btn rounded-full  text-white btn-block ${added === true ? 'bg-green-500': 'bg-linear-to-r from-[#4F39F6] to-[#9514FA]'} `}>{added === true ? 'Added SuccessFully' : 'Buy Now'}</button>
     </div>
   </div>
 </div>
