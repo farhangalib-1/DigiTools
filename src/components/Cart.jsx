@@ -1,12 +1,14 @@
 import { ShoppingCart } from "lucide-react"
-import { useState } from "react";
+import { ToastContainer, toast } from 'react-toastify';
 
 const Cart = ({addCartProducts, setAddCartProducts}) => {
+  const notify = () => toast.success("Your order is placed successfully");
   const remove = (id) =>{
     const updatedCart = addCartProducts.filter(el => el.id !== id);
     setAddCartProducts(updatedCart);
   }
 const deleteData = () =>{
+  notify();
   setAddCartProducts([]);
 }
   console.log(addCartProducts);

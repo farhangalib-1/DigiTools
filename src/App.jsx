@@ -10,6 +10,7 @@ import Pricing from './components/Pricing'
 import Footer from './components/Footer'
 import Lastfooter from './components/Lastfooter.jsx'
  import { ToastContainer, toast } from 'react-toastify';
+import Workflow from './components/Workflow.jsx'
 const App = () => {
   const[data, setData] = useState([]);
   const [pricedata, setPriceData] = useState([]);
@@ -39,6 +40,7 @@ const App = () => {
     <Starter />
     <Pricing pricedata={pricedata} />
     <ToastContainer autoClose={3000} />
+    <Workflow />
     <Footer />
     <Lastfooter />
     </div>
