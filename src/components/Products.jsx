@@ -23,7 +23,7 @@ const Products = ({data, addCartProducts, setAddCartProducts}) => {
             {
                 data.map((el, i)=><Card addCartProducts={addCartProducts} setAddCartProducts={setAddCartProducts} element={el} key={i} name={el.name} description={el.description} price={el.price} period={el.period} tag={el.tag} features={el.features} icon={el.icon}/>)
             }
-        </div> : <Cart addCartProducts={addCartProducts} />
+        </div> : <Cart addCartProducts={addCartProducts} setAddCartProducts={setAddCartProducts} />
        }
     </div>
   )

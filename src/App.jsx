@@ -32,7 +32,7 @@ const App = () => {
   
   return (
     <>
-    <Navbar />
+    <Navbar addCartProducts={addCartProducts} />
     <HeroBg />
     <Stat />
     <Products data={data} addCartProducts={addCartProducts} setAddCartProducts={setAddCartProducts}  />
