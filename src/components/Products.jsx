@@ -2,8 +2,11 @@ import { useState } from "react"
 import Card from "./Card";
 import Cart from "./Cart";
 
-const Products = ({data}) => {
+const Products = ({data, addCartProducts, setAddCartProducts}) => {
     const[active, setActive] = useState("Products");
+    
+    
+    
   return (
     <div>
         <div className="TextContents w-10/12 mx-auto mt-30 text-center">
@@ -12,15 +15,15 @@ const Products = ({data}) => {
             <div className="border border-gray-300 rounded-full w-fit inline pl-1 pr-1 py-3 space-x-4">
             <button onClick={()=>{setActive("Products")}} className={`text-[16px] 
                 ${active==='Products'? 'bg-linear-to-r from-[#4F39F6] to-[#9514FA] text-white shadow-2xl':"text-black bg-transparent" } px-5 py-2 rounded-full font-semibold   cursor-pointer`}>Products</button>
-            <button onClick={()=>{setActive("Cart")}} className={`text-[16px]  ${active==='Cart'? 'bg-linear-to-r from-[#4F39F6] to-[#9514FA] text-white shadow-2xl':"text-black bg-transparent" } px-5 py-2 rounded-full font-semibold cursor-pointer`}>Cart</button>
+            <button onClick={()=>{setActive("Cart")}} className={`text-[16px]  ${active==='Cart'? 'bg-linear-to-r from-[#4F39F6] to-[#9514FA] text-white shadow-2xl':"text-black bg-transparent" } px-5 py-2 rounded-full font-semibold cursor-pointer`}>Cart ({addCartProducts.length})</button>
             </div>
         </div>
        {
         active === "Products" ?  <div className="All Products grid grid-cols-1 md:grid-cols-3 w-fit mx-auto gap-10 items-center mt-4">
             {
-                data.map((el, i)=><Card key={i} name={el.name} description={el.description} price={el.price} period={el.period} tag={el.tag} features={el.features} icon={el.icon}/>)
+                data.map((el, i)=><Card addCartProducts={addCartProducts} setAddCartProducts={setAddCartProducts} element={el} key={i} name={el.name} description={el.description} price={el.price} period={el.period} tag={el.tag} features={el.features} icon={el.icon}/>)
             }
-        </div> : <Cart />
+        </div> : <Cart addCartProducts={addCartProducts} />
        }
     </div>
   )

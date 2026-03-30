@@ -1,6 +1,8 @@
 import { ShoppingCart } from "lucide-react"
 
-const Cart = () => {
+const Cart = ({addCartProducts}) => {
+  console.log(addCartProducts);
+  
   return (
     <div className="w-10/12 mx-auto border border-gray-300 rounded-lg text-center py-40
     mt-4">

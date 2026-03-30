@@ -13,7 +13,7 @@ import Lastfooter from './components/Lastfooter.jsx'
 const App = () => {
   const[data, setData] = useState([]);
   const [pricedata, setPriceData] = useState([]);
-  const[addProducts, setAddProducts] = useState([]);
+  const[addCartProducts, setAddCartProducts] = useState([]);
   const ProductsData = async () =>{
       const res = await axios.get("/Product.json")
       setData(res.data);  
@@ -35,7 +35,7 @@ const App = () => {
     <Navbar />
     <HeroBg />
     <Stat />
-    <Products data={data} />
+    <Products data={data} addCartProducts={addCartProducts} setAddCartProducts={setAddCartProducts}  />
     <Starter />
     <Pricing pricedata={pricedata} />
     <ToastContainer autoClose={3000} />
