@@ -1,8 +1,8 @@
 const Starter = () => {
   return (
     <div className="bg-gray-100 mt-30 pb-30">
-        <h1 className="pt-30 text-5xl font-bold mb-4 text-center">Get Started in 3 Steps</h1>
-        <p className="text-gray-500 text-center mb-10">Start using premium digital tools in minutes, not hours.</p>
+        <h1 className="pt-30 text-3xl  md:text-5xl font-bold mb-4 text-center">Get Started in 3 Steps</h1>
+        <p className="text-gray-500 text-center text-[13px] md:text-[16px] mb-10">Start using premium digital tools in minutes, not hours.</p>
         <div className="cards grid grid-cols-1 md:grid-cols-3 w-10/12 mx-auto gap-7.5">
              <div className="card shadow p-6 text-center bg-white">
                 <div className="text flex justify-end"><h1 className="w-fit border px-2 py-1 rounded-full bg-linear-to-r from-[#4F39F6] to-[#9514FA] text-white font-semibold">01</h1></div>

@@ -4,8 +4,8 @@ const Pricing = ({pricedata}) => {
   return (
     <div>
     <div className="text-center mt-30 ">
-      <h1 className="text-5xl font-bold mb-4">Simple, Transparent Pricing</h1>
-      <p className="text-[#627382] mb-10">Choose the plan that fits your needs. Upgrade or downgrade anytime.</p>
+      <h1 className="text-2xl md:text-5xl font-bold mb-4">Simple, Transparent Pricing</h1>
+      <p className="text-[#627382] mb-10 text-[12px] md:text-[16px]">Choose the plan that fits your needs. Upgrade or downgrade anytime.</p>
       </div>
       <div className="allPricingCard w-10/12 mx-auto grid grid-cols-1 md:grid-cols-3 gap-4">
       {
