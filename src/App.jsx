@@ -8,11 +8,12 @@ import Products from './components/Products'
 import Starter from './components/Starter'
 import Pricing from './components/Pricing'
 import Footer from './components/Footer'
-import { Copyright } from 'lucide-react'
 import Lastfooter from './components/Lastfooter.jsx'
+ import { ToastContainer, toast } from 'react-toastify';
 const App = () => {
   const[data, setData] = useState([]);
   const [pricedata, setPriceData] = useState([]);
+  const[addProducts, setAddProducts] = useState([]);
   const ProductsData = async () =>{
       const res = await axios.get("/Product.json")
       setData(res.data);  
@@ -37,6 +38,7 @@ const App = () => {
     <Products data={data} />
     <Starter />
     <Pricing pricedata={pricedata} />
+    <ToastContainer autoClose={3000} />
     <Footer />
     <Lastfooter />
     </>
