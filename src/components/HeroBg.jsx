@@ -2,7 +2,7 @@ import { Play } from "lucide-react"
 
 const HeroBg = () => {
   return (
-    <div className="w-10/12 mx-auto flex gap-4 flex-col md:flex-row justify-between mt-13 items-center">
+    <div className="w-10/12 mx-auto flex gap-4 flex-col md:flex-row justify-center md:justify-between mt-13 items-center">
         <div className="leftContents space-y-4">
             <div className="ping bg-[#E1E7FF] w-fit py-2 px-4 rounded-full flex items-center gap-2">
       <div class="inline-grid *:[grid-area:1/1]">

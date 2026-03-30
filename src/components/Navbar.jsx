@@ -2,7 +2,7 @@ import { ShoppingCart } from "lucide-react"
 
 const Navbar = ({ addCartProducts }) => {
   return (
-  <div className="navbar bg-base-100 shadow-sm  md:px-50b ">
+  <div className="navbar bg-base-100 shadow-sm md:px-50">
   <div className="navbar-start">
     <div className="dropdown">
       <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -18,9 +18,10 @@ const Navbar = ({ addCartProducts }) => {
       <li><a>Pricing</a></li>
       <li><a>Testimonials</a></li>
       <li><a>FAQ</a></li>
+      <li><a>Login</a></li>
       </ul>
     </div>
-    <a className="font-bold text-2xl bg-linear-to-r from-[#4F39F6] to-[#9514FA] bg-clip-text text-transparent">DigiTools</a>
+    <a className="font-bold text-lg md:text-2xl bg-linear-to-r from-[#4F39F6] to-[#9514FA] bg-clip-text text-transparent">DigiTools</a>
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1 font-semibold">
@@ -36,14 +37,13 @@ const Navbar = ({ addCartProducts }) => {
   <div className="navbar-end gap-6">
     <div class="indicator">
       {
-          addCartProducts.length > 0 &&  <span class="indicator-item badge badge-secondary w-8 h-4 p-2">{addCartProducts.length}</span>
+          addCartProducts.length > 0 &&  <span class="indicator-item badge badge-secondary w-8 h-4 rounded-full p-2">{addCartProducts.length}</span>
       }
- 
  <ShoppingCart size={35} />
 </div>
    
-    <a href=""> Login</a>
-    <a className="btn rounded-full  bg-linear-to-r from-[#4F39F6] to-[#9514FA] text-white">Get Started</a>
+    <a className="hidden md:block" href=""> Login</a>
+    <a className="btn rounded-full bg-linear-to-r from-[#4F39F6] to-[#9514FA] text-white">Get Started</a>
   </div>
 </div>
   )

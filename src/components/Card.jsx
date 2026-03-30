@@ -12,7 +12,7 @@ const addProducts = ()=>{
     addCartProducts.find(el=>el.id === element.id) || setAdded(true)
   }
   return (
-   <div className="card max-w-96 bg-base-100 shadow-sm">
+   <div className="card max-w-96 bg-base-100 shadow-sm mx-4">
   <div className="card-body">
     <div className="flex justify-end">
     <span className={`badge badge-lg rounded-full ${tag === 'Best Seller' && 'badge-soft badge-warning border border-[#ffe4ab] '} ${tag === 'Popular' && 'badge-soft badge-primary border border-[#bfc9fe]'} ${tag === 'New' && 'badge-soft badge-success border border-[#a8ffd4]'} `}>{tag}</span>

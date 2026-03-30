@@ -6,7 +6,7 @@ const Stat = () => {
                 <h1 className="text-[60px] font-bold text text-center">50K+</h1>
                 <p className="text-center text-gray-300">Active Users</p>
             </div>
-            <div className="md:border-l-2 md:border-r-2 ">
+            <div className="md:border-l-2 md:border-gray-300 md:border-r-2 ">
                 <h1 className="text-[60px] font-bold text-center">200+</h1>
                 <p className="text-center text-gray-300">Premium Tools</p>
             </div>
